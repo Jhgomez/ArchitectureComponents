@@ -77,8 +77,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        Log.d(TAG, "onCreate Called")
 
-        Log.d()
         setContent {
             DessertClickerTheme {
                 // A surface container using the 'background' color from the theme
