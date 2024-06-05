@@ -93,6 +93,11 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(TAG, "onRestart Called")
+    }
+
     override fun onStart() {
         super.onStart()
         Log.d(TAG, "onStart Called")
