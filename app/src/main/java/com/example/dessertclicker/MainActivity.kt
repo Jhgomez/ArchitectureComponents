@@ -119,11 +119,14 @@ class MainActivity : ComponentActivity() {
         super.onStop()
         Log.d(TAG, "onStop Called")
     }
+<<<<<<< HEAD
 
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG, "onDestroy Called")
     }
+=======
+>>>>>>> 44a5625 (chore: Add ovrriden method)
 }
 
 /**
