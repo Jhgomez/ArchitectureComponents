@@ -114,6 +114,7 @@ class MainActivity : ComponentActivity() {
         super.onPause()
         Log.d(TAG, "onPause Called")
     }
+<<<<<<< HEAD
 
     override fun onStop() {
         super.onStop()
@@ -127,6 +128,8 @@ class MainActivity : ComponentActivity() {
     }
 =======
 >>>>>>> 44a5625 (chore: Add ovrriden method)
+=======
+>>>>>>> 9e34c77 (chore: Add ovrriden method)
 }
 
 /**
