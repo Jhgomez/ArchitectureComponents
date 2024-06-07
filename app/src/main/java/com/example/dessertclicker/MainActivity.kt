@@ -180,7 +180,7 @@ private fun DessertClickerApp(
 ) {
 
     var revenue by rememberSaveable { mutableStateOf(0) }
-    var dessertsSold by remember { mutableStateOf(0) }
+    var dessertsSold by rememberSaveable { mutableStateOf(0) }
 
     val currentDessertIndex by remember { mutableStateOf(0) }
 
