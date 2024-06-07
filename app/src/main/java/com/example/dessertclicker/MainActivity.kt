@@ -187,7 +187,7 @@ private fun DessertClickerApp(
     var currentDessertPrice by rememberSaveable {
         mutableStateOf(desserts[currentDessertIndex].price)
     }
-    var currentDessertImageId by remember {
+    var currentDessertImageId by rememberSaveable {
         mutableStateOf(desserts[currentDessertIndex].imageId)
     }
 
