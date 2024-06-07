@@ -325,6 +325,8 @@ private fun TransactionInfo(
                 .padding(dimensionResource(R.dimen.padding_medium))
         )
     }
+
+    // comment
 }
 
 
