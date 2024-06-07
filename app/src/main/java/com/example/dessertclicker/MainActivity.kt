@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 /*
  * Copyright (C) 2023 The Android Open Source Project
  *
@@ -179,9 +178,11 @@ private fun shareSoldDessertsInformation(intentContext: Context, dessertsSold: I
 private fun DessertClickerApp(
     desserts: List<Dessert>
 ) {
-
     var revenue by remember { mutableStateOf(0) }
     var dessertsSold by remember { mutableStateOf(0) }
+
+    var revenue by rememberSaveable { mutableStateOf(0) }
+    var dessertsSold by rememberSaveable { mutableStateOf(0) }
 
     val currentDessertIndex by rememberSaveable { mutableStateOf(0) }
 
@@ -373,4 +374,3 @@ fun MyDessertClickerAppPreview() {
         DessertClickerApp(listOf(Dessert(R.drawable.cupcake, 5, 0)))
     }
 }
->>>>>>> 1bac5e8 (chore: Add ovrriden method)
