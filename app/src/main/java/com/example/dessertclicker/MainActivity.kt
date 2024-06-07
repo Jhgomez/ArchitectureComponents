@@ -328,6 +328,7 @@ private fun TransactionInfo(
     // comment
 }
 
+
 @Composable
 private fun RevenueInfo(revenue: Int, modifier: Modifier = Modifier) {
     Row(
