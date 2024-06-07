@@ -183,7 +183,7 @@ private fun DessertClickerApp(
     var revenue by remember { mutableStateOf(0) }
     var dessertsSold by remember { mutableStateOf(0) }
 
-    val currentDessertIndex by remember { mutableStateOf(0) }
+    val currentDessertIndex by rememberSaveable { mutableStateOf(0) }
 
     var currentDessertPrice by rememberSaveable {
         mutableStateOf(desserts[currentDessertIndex].price)
