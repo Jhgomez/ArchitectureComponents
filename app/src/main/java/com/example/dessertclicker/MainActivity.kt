@@ -57,6 +57,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -178,10 +179,8 @@ private fun shareSoldDessertsInformation(intentContext: Context, dessertsSold: I
 private fun DessertClickerApp(
     desserts: List<Dessert>
 ) {
-    var revenue by remember { mutableStateOf(0) }
-    var dessertsSold by remember { mutableStateOf(0) }
-
     var revenue by rememberSaveable { mutableStateOf(0) }
+
     var dessertsSold by rememberSaveable { mutableStateOf(0) }
 
     val currentDessertIndex by rememberSaveable { mutableStateOf(0) }
@@ -208,9 +207,11 @@ private fun DessertClickerApp(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(
-                        start = WindowInsets.safeDrawing.asPaddingValues()
+                        start = WindowInsets.safeDrawing
+                            .asPaddingValues()
                             .calculateStartPadding(layoutDirection),
-                        end = WindowInsets.safeDrawing.asPaddingValues()
+                        end = WindowInsets.safeDrawing
+                            .asPaddingValues()
                             .calculateEndPadding(layoutDirection),
                     )
                     .background(MaterialTheme.colorScheme.primary)
