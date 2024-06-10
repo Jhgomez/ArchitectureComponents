@@ -194,7 +194,6 @@ private fun DessertClickerAppContent(
     revenue: Int = 0,
     dessertsSold: Int = 0,
     currentDessertIndex: Int = 0,
-    currentDessertPrice: Int = 0,
     currentDessertImageId: Int = 0,
     onAddItemToCart: () -> Unit = {}
 ) {
