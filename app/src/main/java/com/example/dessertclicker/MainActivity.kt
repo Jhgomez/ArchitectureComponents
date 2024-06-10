@@ -187,12 +187,14 @@ private fun DessertClickerApp(
     DessertClickerAppContent(
         revenue = uiState.revenue,
         dessertsSold = uiState.dessertsSold,
+        currentDessertImageId = uiState.currentDessertImageId,
         onAddItemToCart = { viewModel.addItemToCart() }
     )
 }
 
 @Composable
 private fun DessertClickerAppContent(
+    currentDessertImageId: Int,
     revenue: Int = 0,
     dessertsSold: Int = 0,
     onAddItemToCart: () -> Unit = {}
