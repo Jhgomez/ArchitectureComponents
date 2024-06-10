@@ -180,7 +180,9 @@ private fun shareSoldDessertsInformation(intentContext: Context, dessertsSold: I
 private fun DessertClickerApp(
     viewModel: DessertViewModel = viewModel()
 ) {
-    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle(
+        lifecycle = (LocalContext.current as ComponentActivity).lifecycle
+    )
 
     DessertClickerAppContent(
         revenue = uiState.revenue,
@@ -193,7 +195,6 @@ private fun DessertClickerApp(
 private fun DessertClickerAppContent(
     revenue: Int = 0,
     dessertsSold: Int = 0,
-    currentDessertImageId: Int = 0,
     onAddItemToCart: () -> Unit = {}
 ) {
     Scaffold(
@@ -366,6 +367,6 @@ private fun DessertsSoldInfo(dessertsSold: Int, modifier: Modifier = Modifier) {
 @Composable
 fun MyDessertClickerAppPreview() {
     DessertClickerTheme {
-        DessertClickerApp(listOf(Dessert(R.drawable.cupcake, 5, 0)))
+//        DessertClickerAppContent(listOf(Dessert(R.drawable.cupcake, 5, 0)))
     }
 }
