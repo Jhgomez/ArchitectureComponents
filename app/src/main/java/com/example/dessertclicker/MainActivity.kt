@@ -177,7 +177,8 @@ private fun shareSoldDessertsInformation(intentContext: Context, dessertsSold: I
 
 @Composable
 private fun DessertClickerApp(
-    desserts: List<Dessert>
+    desserts: List<Dessert>,
+    revenue: Int = 0,
 ) {
     var revenue by rememberSaveable { mutableStateOf(0) }
 
