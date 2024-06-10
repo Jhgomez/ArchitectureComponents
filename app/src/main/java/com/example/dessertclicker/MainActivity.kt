@@ -70,6 +70,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.dessertclicker.model.Dessert
 import com.example.dessertclicker.ui.theme.DessertClickerTheme
@@ -179,7 +180,11 @@ private fun shareSoldDessertsInformation(intentContext: Context, dessertsSold: I
 private fun DessertClickerApp(
     viewModel: DessertViewModel = viewModel()
 ) {
+    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
+    DessertClickerApp(
+
+    )
 }
 
 @Composable
