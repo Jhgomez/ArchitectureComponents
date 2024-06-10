@@ -24,7 +24,7 @@ class DessertViewModel: ViewModel() {
             val revenue = currentStatus.revenue + currentStatus.currentDessertPrice
             val dessertsSold = currentStatus.dessertsSold.inc()
             // Show the next dessert
-            val dessertToShow = determineDessertToShow(currentStatus.desserts, dessertsSold)
+            val dessertToShow = determineDessertToShow(dessertsSold)
 
             currentStatus.copy(
                 dessertsSold = dessertsSold,
@@ -40,11 +40,10 @@ class DessertViewModel: ViewModel() {
      * Determine which dessert to show.
      */
     private fun determineDessertToShow(
-        desserts: List<Dessert>,
         dessertsSold: Int
     ): Dessert {
-        var dessertToShow = desserts.first()
-        for (dessert in desserts) {
+        var dessertToShow = _uiState.value.desserts.first()
+        for (dessert in uiState.value.desserts) {
             if (dessertsSold >= dessert.startProductionAmount) {
                 dessertToShow = dessert
             } else {
