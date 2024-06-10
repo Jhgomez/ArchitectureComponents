@@ -184,6 +184,8 @@ private fun DessertClickerApp(
 
     DessertClickerAppContent(
         desserts = uiState.desserts,
+        revenue = uiState.revenue,
+        dessertsSold = uiState.dessertsSold,
 
     )
 }
