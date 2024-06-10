@@ -182,7 +182,8 @@ private fun DessertClickerApp(
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
-    DessertClickerApp(
+    DessertClickerAppContent(
+        desserts = uiState.desserts,
 
     )
 }
