@@ -197,14 +197,8 @@ private fun DessertClickerAppContent(
     dessertsSold: Int = 0,
     currentDessertIndex: Int = 0,
     currentDessertPrice: Int = 0,
+    currentDessertImageId: Int = 0
 ) {
-    var currentDessertPrice by rememberSaveable {
-        mutableStateOf(desserts[currentDessertIndex].price)
-    }
-    var currentDessertImageId by remember {
-        mutableStateOf(desserts[currentDessertIndex].imageId)
-    }
-
     Scaffold(
         topBar = {
             val intentContext = LocalContext.current
