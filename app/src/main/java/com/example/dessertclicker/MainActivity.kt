@@ -176,7 +176,14 @@ private fun shareSoldDessertsInformation(intentContext: Context, dessertsSold: I
 }
 
 @Composable
-private fun DessertClickerApp(
+private fun DessertClickApp(
+
+) {
+
+}
+
+@Composable
+private fun DessertClickerAppContent(
     desserts: List<Dessert>,
     revenue: Int = 0,
     dessertsSold: Int = 0,
