@@ -197,7 +197,8 @@ private fun DessertClickerAppContent(
     dessertsSold: Int = 0,
     currentDessertIndex: Int = 0,
     currentDessertPrice: Int = 0,
-    currentDessertImageId: Int = 0
+    currentDessertImageId: Int = 0,
+    onAddItemToCart: () -> Unit = {}
 ) {
     Scaffold(
         topBar = {
@@ -229,17 +230,7 @@ private fun DessertClickerAppContent(
             revenue = revenue,
             dessertsSold = dessertsSold,
             dessertImageId = currentDessertImageId,
-            onDessertClicked = {
-
-                // Update the revenue
-                revenue += currentDessertPrice
-                dessertsSold++
-
-                // Show the next dessert
-                val dessertToShow = determineDessertToShow(desserts, dessertsSold)
-                currentDessertImageId = dessertToShow.imageId
-                currentDessertPrice = dessertToShow.price
-            },
+            onDessertClicked = onAddItemToCart,
             modifier = Modifier.padding(contentPadding)
         )
     }
