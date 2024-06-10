@@ -183,7 +183,6 @@ private fun DessertClickerApp(
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     DessertClickerAppContent(
-        desserts = uiState.desserts,
         revenue = uiState.revenue,
         dessertsSold = uiState.dessertsSold,
         onAddItemToCart = { viewModel.addItemToCart() }
@@ -192,7 +191,6 @@ private fun DessertClickerApp(
 
 @Composable
 private fun DessertClickerAppContent(
-    desserts: List<Dessert>,
     revenue: Int = 0,
     dessertsSold: Int = 0,
     currentDessertIndex: Int = 0,
