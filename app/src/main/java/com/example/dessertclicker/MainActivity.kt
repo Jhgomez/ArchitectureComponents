@@ -195,14 +195,9 @@ private fun DessertClickerAppContent(
     desserts: List<Dessert>,
     revenue: Int = 0,
     dessertsSold: Int = 0,
-    currentDessertIndex: Int = 0
+    currentDessertIndex: Int = 0,
+    currentDessertPrice: Int = 0,
 ) {
-    var revenue by rememberSaveable { mutableStateOf(0) }
-
-    var dessertsSold by rememberSaveable { mutableStateOf(0) }
-
-    val currentDessertIndex by rememberSaveable { mutableStateOf(0) }
-
     var currentDessertPrice by rememberSaveable {
         mutableStateOf(desserts[currentDessertIndex].price)
     }
