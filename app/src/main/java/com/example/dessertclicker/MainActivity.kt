@@ -186,7 +186,7 @@ private fun DessertClickerApp(
         desserts = uiState.desserts,
         revenue = uiState.revenue,
         dessertsSold = uiState.dessertsSold,
-        currentDessertIndex = uiState.currentDessertIndex
+        onAddItemToCart = { viewModel.addItemToCart() }
     )
 }
 
