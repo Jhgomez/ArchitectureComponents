@@ -9,9 +9,16 @@ class DessertViewModel: ViewModel() {
     private val _uiState = MutableStateFlow(DessertUiState())
     val uiState = _uiState.asStateFlow()
 
+//    private val currentDessertPrice =
+
     init {
         _uiState.value = DessertUiState(
-            desserts = Datasource.dessertList
+            desserts = Datasource.dessertList,
+            currentDessertImageId = Datasource.dessertList[0].imageId,
+            currentDessertPrice = Datasource.dessertList[0].imageId
+
         )
     }
+
+//    fun addToCart(int)
 }
